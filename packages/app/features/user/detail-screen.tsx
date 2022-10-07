@@ -16,13 +16,8 @@ export function UserDetailScreen() {
         bg: '$background',
       }}
     >
-      <Link href="/">
-        <Text sx={{ textAlign: 'center' }}>
-          {`User ID:`}{' '}
-          <Text sx={{ bg: '$purple3', px: '$1', borderRadius: '$1' }}>
-            {id}
-          </Text>
-        </Text>
+      <Link href="/users">
+        <Text sx={{ bg: '$purple3', px: '$2', py: '$2' }}>{id}</Text>
       </Link>
     </View>
   )

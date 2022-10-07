@@ -19,13 +19,7 @@ export default function MyStack({ children }) {
       <Stack.Screen
         name="index"
         options={{
-          title: 'Users',
-        }}
-      />
-      <Stack.Screen
-        name="[id]"
-        options={{
-          title: 'User',
+          title: 'Home',
         }}
       />
     </Stack>
