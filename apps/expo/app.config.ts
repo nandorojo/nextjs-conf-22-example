@@ -30,4 +30,5 @@ export default {
     package: 'com.solito.nextconf',
     googleServicesFile: './google/google-services.json',
   },
+  plugins: ['@react-native-firebase/app'],
 } as ExpoConfig

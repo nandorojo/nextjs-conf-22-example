@@ -11,7 +11,7 @@ export function HomeScreen() {
         alignItems: 'center',
       }}
     >
-      <Link href="/users">
+      <Link href="/account">
         <Text
           sx={{
             py: '$2',
