@@ -5337,10 +5337,10 @@ expo-pwa@0.0.123:
     commander "2.20.0"
     update-check "1.5.3"
 
-expo-router@^0.0.17:
-  version "0.0.17"
-  resolved "https://registry.yarnpkg.com/expo-router/-/expo-router-0.0.17.tgz#163998bee91b681449a0b10745f15c2794798edb"
-  integrity sha512-s9Roy3PBIIIACpVp1xR1nV3qqH6M8QpWkJLdJJfmDyA0rylifUyBaJ7NKAeG+Ep2WvP9ZUNz5KB6AjtZRUXi3Q==
+expo-router@^0.0.25:
+  version "0.0.25"
+  resolved "https://registry.yarnpkg.com/expo-router/-/expo-router-0.0.25.tgz#453fb767beb37a80b89bd295c8338f3fa475eed6"
+  integrity sha512-/jdrBdD4giFeWyqZOSi5581j0JJQYY8QJsfzMBo9xWt402eyG1gkz9nb9+p1jP/4qaVOys9XB/hpnkL95lqTGA==
   dependencies:
     "@bacons/expo-metro-runtime" "^2.0.1"
     "@bacons/react-views" "^1.1.3"
