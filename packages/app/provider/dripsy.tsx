@@ -4,6 +4,7 @@ const theme = makeTheme({
   // https://www.dripsy.xyz/usage/theming/create
   colors: {
     $background: '#161618',
+    $background2: 'rgb(28, 28, 31)',
 
     $purple3: '#32275F',
     $text: '#ffffff',
@@ -11,6 +12,7 @@ const theme = makeTheme({
   text: {
     body: {
       color: '$text',
+      fontSize: 14,
     },
     p: {
       fontSize: 16,

@@ -16,7 +16,6 @@ export function HomeScreen() {
           sx={{
             py: '$2',
             px: '$3',
-            borderRadius: '$rounded',
             bg: '$purple3',
           }}
         >
