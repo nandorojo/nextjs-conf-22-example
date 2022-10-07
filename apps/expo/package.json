@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "@react-native-firebase/app": "^15.7.0",
+    "@react-native-firebase/auth": "^15.7.0",
     "app": "*",
     "expo": "46.0.13",
     "expo-router": "^0.0.25",
