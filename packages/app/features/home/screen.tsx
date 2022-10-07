@@ -16,7 +16,7 @@ export function HomeScreen() {
           sx={{
             py: '$2',
             px: '$3',
-            bg: '$purple3',
+            bg: '$background3',
           }}
         >
           Hello Solito

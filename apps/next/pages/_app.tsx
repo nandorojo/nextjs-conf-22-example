@@ -1,4 +1,5 @@
 import 'raf/polyfill'
+import { WebLayout } from 'app/layout/web'
 
 const fixReanimatedIssue = () => {
   // FIXME remove this once this reanimated fix gets released
@@ -28,7 +29,9 @@ function MyApp({ Component, pageProps }: SolitoAppProps) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Provider>
-        <Component {...pageProps} />
+        <WebLayout>
+          <Component {...pageProps} />
+        </WebLayout>
       </Provider>
     </>
   )
