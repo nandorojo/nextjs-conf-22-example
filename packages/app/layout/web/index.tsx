@@ -18,12 +18,17 @@ const tabs: Array<{
     isActive: (pathname) => pathname.startsWith('/users'),
     name: 'Users',
   },
+  {
+    pathname: '/account',
+    isActive: (pathname) => pathname.startsWith('/account'),
+    name: 'My Account',
+  },
 ]
 
 const height = 34
 
 // this will only run on Web
-export function WebLayout({ children }) {
+export function WebLayout({ children }: { children: React.ReactNode }) {
   const { pathname } = useRouter()
   return (
     <>

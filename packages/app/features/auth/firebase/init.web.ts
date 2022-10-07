@@ -1,10 +1,11 @@
+// please note that firebase auth adds about 30kb to your bundle size on Web
 import { initializeApp } from 'firebase/app'
 import {
   initializeAuth,
   browserPopupRedirectResolver,
   browserLocalPersistence,
   signInAnonymously as signInAnonymouslyFirebase,
-  onIdTokenChanged as onIdTokenChangedFirebase,
+  onAuthStateChanged as onAuthStateChangedFirebase,
 } from 'firebase/auth'
 import { Firebase } from './types'
 
@@ -12,7 +13,7 @@ let auth: ReturnType<typeof initializeAuth>
 
 if (typeof window !== 'undefined') {
   const firebaseApp = initializeApp({
-    // REPLACE THIS WITH YOUR AUTH CONFIG
+    // TODO REPLACE THIS WITH YOUR AUTH CONFIG
     apiKey: 'AIzaSyAQZ1A-bJMQqjdzNQhRPkbA7swEFnwUS_w',
     authDomain: 'solito-example.firebaseapp.com',
     projectId: 'solito-example',
@@ -37,7 +38,7 @@ const signInAnonymously: Firebase['signInAnonymously'] = async () => {
 }
 
 const onAuthStateChanged: Firebase['onAuthStateChanged'] = (callback) => {
-  return onIdTokenChangedFirebase(auth, callback)
+  return onAuthStateChangedFirebase(auth, callback)
 }
 
 const getCurrentUser: Firebase['getCurrentUser'] = () => auth.currentUser
