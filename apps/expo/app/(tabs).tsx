@@ -39,7 +39,22 @@ function MyTabs() {
           tabBarIcon({ color, size, focused }) {
             return (
               <Ionicons
-                name={focused ? 'people' : 'people-outline'}
+                name={focused ? 'list' : 'list-outline'}
+                size={size}
+                color={color}
+              />
+            )
+          },
+        }}
+      />
+      <Tabs.Screen
+        name="account"
+        options={{
+          title: 'My Account',
+          tabBarIcon({ color, size, focused }) {
+            return (
+              <Ionicons
+                name={focused ? 'person' : 'person-outline'}
                 size={size}
                 color={color}
               />
