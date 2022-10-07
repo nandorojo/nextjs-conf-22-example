@@ -10,8 +10,16 @@ const signInAnonymously: Firebase['signInAnonymously'] = async () => {
   return (await auth().signInAnonymously()).user
 }
 
-const onIdTokenChanged: Firebase['onIdTokenChanged'] = (callback) => {
+const onAuthStateChanged: Firebase['onAuthStateChanged'] = (callback) => {
   return auth().onIdTokenChanged(callback)
 }
 
-export { getIsSignedIn, signOut, signInAnonymously, onIdTokenChanged }
+const getCurrentUser: Firebase['getCurrentUser'] = () => auth().currentUser
+
+export {
+  getIsSignedIn,
+  signOut,
+  signInAnonymously,
+  onAuthStateChanged,
+  getCurrentUser,
+}

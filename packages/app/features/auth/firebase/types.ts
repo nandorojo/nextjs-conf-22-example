@@ -1,10 +1,13 @@
 import type * as firebase from 'firebase/auth'
 
+type User = Pick<firebase.User, 'uid'>
+
 export type Firebase = {
   getIsSignedIn: () => boolean
-  signInAnonymously: () => Promise<Pick<firebase.User, 'uid'>>
+  signInAnonymously: () => Promise<User>
   signOut: () => Promise<void>
-  onIdTokenChanged: (
+  onAuthStateChanged: (
     callback: (user: { uid: string } | null) => void
   ) => () => void
+  getCurrentUser: () => User | null
 }

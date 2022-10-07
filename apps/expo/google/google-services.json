@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "960783729432",
+    "project_id": "solito-example",
+    "storage_bucket": "solito-example.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:960783729432:android:df8aeb26500d4a79b3146d",
+        "android_client_info": {
+          "package_name": "com.solito.nextconf"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "960783729432-d9gs06vgugdegpjraa5mb6hclntu68tq.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqPvxTjO2tkgNzYjXeq1h_wAh9XUAdhFs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "960783729432-d9gs06vgugdegpjraa5mb6hclntu68tq.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "960783729432-oi7vjohmsjmmchok1410771rakkpkh6m.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.solito.next-conf"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
