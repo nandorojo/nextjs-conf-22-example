@@ -1,3 +1,4 @@
+import { useAuth } from 'app/features/auth/context'
 import { View, Text, A } from 'dripsy'
 import { useRouter } from 'next/router'
 import { Fragment } from 'react'
@@ -7,6 +8,7 @@ const tabs: Array<{
   pathname: string
   isActive(pathname: string): boolean
   name: string
+  protected?: boolean
 }> = [
   {
     pathname: '/',
@@ -17,6 +19,7 @@ const tabs: Array<{
     pathname: '/users',
     isActive: (pathname) => pathname.startsWith('/users'),
     name: 'Users',
+    protected: true,
   },
   {
     pathname: '/account',
@@ -30,6 +33,7 @@ const height = 34
 // this will only run on Web
 export function WebLayout({ children }: { children: React.ReactNode }) {
   const { pathname } = useRouter()
+  const auth = useAuth()
   return (
     <>
       <View
@@ -54,6 +58,9 @@ export function WebLayout({ children }: { children: React.ReactNode }) {
         >
           {tabs.map((tab) => {
             const active = tab.isActive(pathname)
+            if (tab.protected && !auth) {
+              return null
+            }
             return (
               <Fragment key={tab.pathname}>
                 <Link href={tab.pathname}>

@@ -13,7 +13,6 @@ let auth: ReturnType<typeof initializeAuth>
 
 if (typeof window !== 'undefined') {
   const firebaseApp = initializeApp({
-    // TODO REPLACE THIS WITH YOUR AUTH CONFIG
     apiKey: 'AIzaSyAQZ1A-bJMQqjdzNQhRPkbA7swEFnwUS_w',
     authDomain: 'solito-example.firebaseapp.com',
     projectId: 'solito-example',

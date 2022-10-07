@@ -3,9 +3,12 @@ import { StatusBar } from 'expo-status-bar'
 import { Tabs } from 'expo-router'
 import { useDripsyTheme } from 'dripsy'
 import { Ionicons } from '@expo/vector-icons'
+import { useAuth } from 'app/features/auth/context'
 
 function MyTabs() {
   const { colors } = useDripsyTheme().theme
+  const auth = useAuth()
+
   return (
     <Tabs
       screenOptions={{
@@ -45,6 +48,7 @@ function MyTabs() {
               />
             )
           },
+          tabBarButton: auth ? undefined : () => null,
         }}
       />
       <Tabs.Screen
