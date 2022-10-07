@@ -5,7 +5,7 @@ const theme = makeTheme({
   colors: {
     $background: '#161618',
     $background2: 'rgb(28, 28, 31)',
-
+    $background3: '#28282C',
     $purple3: '#32275F',
     $text: '#ffffff',
   },

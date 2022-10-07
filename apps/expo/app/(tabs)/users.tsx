@@ -1,10 +1,7 @@
 import { NativeStack as Stack } from 'expo-router'
-import { Provider } from 'app/provider'
-
 import { useDripsyTheme } from 'dripsy'
-import { StatusBar } from 'expo-status-bar'
 
-function MyStack() {
+export default function MyStack() {
   const { colors } = useDripsyTheme().theme
   return (
     <Stack
@@ -22,24 +19,15 @@ function MyStack() {
       <Stack.Screen
         name="index"
         options={{
-          title: 'Home',
+          title: 'Users',
         }}
       />
       <Stack.Screen
-        name="users"
+        name="[id]"
         options={{
           title: 'User',
         }}
       />
     </Stack>
-  )
-}
-
-export default function Root() {
-  return (
-    <Provider>
-      <MyStack />
-      <StatusBar style="light" />
-    </Provider>
   )
 }
