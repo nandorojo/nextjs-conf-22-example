@@ -42,7 +42,7 @@ function MyTabs() {
           tabBarIcon({ color, size, focused }) {
             return (
               <Ionicons
-                name={focused ? 'list' : 'list-outline'}
+                name={focused ? 'people-circle' : 'people-circle-outline'}
                 size={size}
                 color={color}
               />
@@ -63,6 +63,24 @@ function MyTabs() {
                 color={color}
               />
             )
+          },
+        }}
+      />
+      <Tabs.Screen
+        name="menus"
+        options={{
+          title: 'Menus',
+          tabBarIcon({ color, size, focused }) {
+            return (
+              <Ionicons
+                name={focused ? 'menu' : 'menu-outline'}
+                size={size}
+                color={color}
+              />
+            )
+          },
+          tabBarStyle: {
+            display: 'none',
           },
         }}
       />

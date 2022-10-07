@@ -1,10 +1,14 @@
 import { NativeStack } from 'expo-router'
 import { useDripsyTheme } from 'dripsy'
 
-export function Stack({ children }) {
+export function Stack({
+  children,
+  ...props
+}: React.ComponentProps<typeof NativeStack>) {
   const { colors } = useDripsyTheme().theme
   return (
     <NativeStack
+      {...props}
       screenOptions={{
         headerStyle: {
           backgroundColor: colors.$background2,
@@ -14,6 +18,7 @@ export function Stack({ children }) {
         },
         headerTintColor: '#D864D8',
         headerShadowVisible: false,
+        ...props.screenOptions,
       }}
     >
       {children}
