@@ -8,6 +8,7 @@ const withTM = require('next-transpile-modules')([
   '@dripsy/core',
   'moti',
   'app',
+  'zeego',
 ])
 
 /** @type {import('next').NextConfig} */
@@ -19,6 +20,9 @@ const nextConfig = {
   // once that gets fixed, set this back to true
   reactStrictMode: false,
   webpack5: true,
+  images: {
+    disableStaticImages: true,
+  },
 }
 
 const transform = withPlugins([withTM, withFonts, withImages, withExpo])

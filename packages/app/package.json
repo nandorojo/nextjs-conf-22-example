@@ -3,6 +3,7 @@
   "name": "app",
   "main": "index.ts",
   "dependencies": {
+    "@radix-ui/react-context-menu": "^0",
     "dripsy": "^3.6.0",
     "expo-linking": "^3.0.0",
     "firebase": "9.10.0",
