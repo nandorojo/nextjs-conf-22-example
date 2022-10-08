@@ -21,6 +21,7 @@
     "**/app-env.d.ts": true,
     ".vscode": true,
     "**/next-env.d.ts": true,
-    "**/next.config.js": true
+    "**/next.config.js": true,
+    "apps/next/public": true
   }
 }

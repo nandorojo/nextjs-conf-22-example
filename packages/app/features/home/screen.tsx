@@ -1,30 +1,18 @@
-import { Provider } from 'app/provider'
-import { Text, View } from 'dripsy'
-import { Link } from 'solito/link'
+import { View } from 'react-native'
+import { TextLink } from 'solito/link'
 
 export function HomeScreen() {
   return (
-    <Provider>
-      <View
-        sx={{
-          flex: 1,
-          bg: '$background',
-          justifyContent: 'center',
-          alignItems: 'center',
-        }}
-      >
-        <Link href="/users/fernando">
-          <Text
-            sx={{
-              py: '$2',
-              px: '$3',
-              bg: '$purple3',
-            }}
-          >
-            Hello Solito
-          </Text>
-        </Link>
-      </View>
-    </Provider>
+    <View
+      style={{
+        flex: 1,
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <TextLink href="/users/fernando">
+        Hello Solito
+      </TextLink>
+    </View>
   )
 }
