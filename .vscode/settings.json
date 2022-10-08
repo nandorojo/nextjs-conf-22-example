@@ -1,3 +1,26 @@
 {
-  "typescript.tsdk": "node_modules/typescript/lib"
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "files.exclude": {
+    ".prettierrc.json": true,
+    "**/.babelrc.json": true,
+    "**/.eslintrc.js": true,
+    "**/.gitignore": true,
+    "**/babel.config.js": true,
+    "**/metro.config.js": true,
+    "**/node_modules": true,
+    "**/rnw-overrides.d.ts": true,
+    "**/tsconfig.json": true,
+    "apps/expo/app.json": true,
+    "apps/expo/index.js": true,
+    "yarn.lock": true,
+    "readme.md": true,
+    "**/package.json": false,
+    "apps/expo/ios": true,
+    "**/.expo": true,
+    "**/.next": true,
+    "**/app-env.d.ts": true,
+    ".vscode": true,
+    "**/next-env.d.ts": true,
+    "**/next.config.js": true
+  }
 }
