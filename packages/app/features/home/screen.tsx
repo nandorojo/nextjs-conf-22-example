@@ -11,7 +11,7 @@ export function HomeScreen() {
       }}
     >
       <TextLink href="/users/fernando">
-        Hello Solito
+        Hello Solito!
       </TextLink>
     </View>
   )
