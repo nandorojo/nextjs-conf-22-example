@@ -10,7 +10,6 @@
     "**/node_modules": true,
     "**/rnw-overrides.d.ts": true,
     "**/tsconfig.json": true,
-    "apps/expo/app.json": true,
     "apps/expo/index.js": true,
     "yarn.lock": true,
     "readme.md": true,

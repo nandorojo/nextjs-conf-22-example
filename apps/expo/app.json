@@ -6,7 +6,12 @@
     "scheme": "solito-expo-router",
     "platforms": ["ios", "android"],
     "ios": {
-      "bundleIdentifier": "com.solito.expo-router"
-    }
+      "bundleIdentifier": "com.solito.expo-router",
+      "googleServicesFile": "./google/GoogleService-Info.plist"
+    },
+    "android": {
+      "googleServicesFile": "./google/google-services.json"
+    },
+    "plugins": ["@react-native-firebase/app"]
   }
 }
