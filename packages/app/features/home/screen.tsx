@@ -1,7 +1,13 @@
-import { View } from 'react-native'
-import { TextLink } from 'solito/link'
+import {
+  signInAnonymously,
+  signOut,
+} from 'app/auth/firebase'
+import { useAuth } from 'app/auth/firebase/use-auth'
+import { Text, View } from 'react-native'
 
 export function HomeScreen() {
+  const auth = useAuth()
+
   return (
     <View
       style={{
@@ -10,9 +16,27 @@ export function HomeScreen() {
         alignItems: 'center',
       }}
     >
-      <TextLink href="/users/fernando">
-        Hello Solito!
-      </TextLink>
+      {!auth && (
+        <Text
+          style={{ color: 'blue' }}
+          onPress={signInAnonymously}
+        >
+          Sign In
+        </Text>
+      )}
+      {auth && (
+        <>
+          <Text>Welcome, {auth.uid}</Text>
+          <Text
+            style={{
+              color: 'green',
+            }}
+            onPress={signOut}
+          >
+            Sign Out
+          </Text>
+        </>
+      )}
     </View>
   )
 }

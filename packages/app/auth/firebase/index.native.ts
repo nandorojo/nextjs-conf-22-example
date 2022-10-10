@@ -10,7 +10,8 @@ const signInAnonymously = async () => {
   return user
 }
 
-const onAuthStateChanged = auth().onAuthStateChanged
+const onAuthStateChanged = (callback) =>
+  auth().onAuthStateChanged(callback)
 
 const getCurrentUser = () => auth().currentUser
 

@@ -12,7 +12,7 @@
     "turbo": "^1.4.2"
   },
   "scripts": {
-    "native": "cd apps/expo && expo start",
+    "native": "cd apps/expo && expo start --dev-client",
     "web": "cd apps/next && yarn next"
   },
   "resolutions": {
