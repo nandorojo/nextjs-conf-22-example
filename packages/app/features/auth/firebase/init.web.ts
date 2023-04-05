@@ -22,7 +22,6 @@ if (typeof window !== 'undefined') {
   })
 
   auth = initializeAuth(firebaseApp, {
-    popupRedirectResolver: browserPopupRedirectResolver,
     persistence: browserLocalPersistence,
   })
 }
